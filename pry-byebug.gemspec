@@ -13,6 +13,13 @@ Gem::Specification.new do |gem|
   gem.description = "Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish',
     'continue' and 'break' commands to control execution."
 
+  if gem.respond_to?(:metadata)
+    gem.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/glooko"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against " \
+      "public gem pushes."
+  end
+
   gem.files = Dir["lib/**/*.rb", "LICENSE"]
   gem.extra_rdoc_files = %w[CHANGELOG.md README.md]
   gem.require_path = "lib"
