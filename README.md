@@ -190,3 +190,8 @@ Patches and bug reports are welcome.
 [InchCIURL]: http://inch-ci.org/github/deivid-rodriguez/pry-byebug
 [CoverageBadge]: https://api.codeclimate.com/v1/badges/a88e27809329c03af017/test_coverage
 [CoverageURL]: https://codeclimate.com/github/deivid-rodriguez/pry-byebug/test_coverage
+
+## Pushing new version to Github Packages
+
+1. Load your personal access token in environment as `GITHUB_GLOOKO_BUNDLE_PASSWORD`
+2. Run `docker compose run gem_publish`
