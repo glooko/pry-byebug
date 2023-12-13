@@ -124,7 +124,7 @@ module PryByebug
         if Regexp.last_match[1].strip.empty?
           errmsg = "Method name declaration valid only in a file context."
           PryByebug.check_file_context(target, errmsg)
-          place = target.eval("self.class.to_s") + place
+          place = target.self.class + place
         end
         breakpoints.add_method(place, condition)
       else

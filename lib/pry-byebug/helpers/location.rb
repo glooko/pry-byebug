@@ -16,8 +16,7 @@ module PryByebug
         # Guard clause for Ruby >= 2.6 providing now Binding#source_location ...
         return source.source_location[0] if source.respond_to?(:source_location)
 
-        # ... to avoid warning: 'eval may not return location in binding'
-        source.eval("__FILE__")
+        __FILE__
       end
     end
   end
